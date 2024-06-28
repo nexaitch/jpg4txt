@@ -5,8 +5,9 @@ Ever wish you could save more space by using lossy text compression? We have the
 ```console
 $ python jpg4txt.py
 Enter text: According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible.
-Encoded: [1433, -8, 27, -2, 30, 2, -9, -10, 16, -14, -1, 16, -23, 8, 24, 4, 5, -4, -4, 6, 21, -11, 6, 7, -11, -1, 18, 30, -19, 31, 2, -16, -11, -16, -36, 32, -21, 15, -50, -47, -13, 12, -3, 41, -31, 17, 7, -35, -25, 10, -28, -24, -8, 13, -56, 24, 34, -9, 57, -34, -21, 11, -32, -6, -11, -56, -6, -16, 20, 36, -42, 36, -4, -46, 0, 48, -14, 17, 5, 10, 4, 22, 10, -8, 8, -22, 14, -67, -46, -17, -37, 59, -12, 37, 2, -28, -38, 38, 14, -44, 23, 29, 4, 32, -17, 5, -22, 46, 29, -35, -47, -61, 22, 13, -70, -40, -3, -21, 66, -6, -24, 19, 1, -26, -38, 106, -39, -74, 17, 17, -4, 35, -17, -10, -6, 15, 71, 96, -20, 4, -11, 29, 17, -16, -3, 79, 20, -46, -53, -15, -30, -15, -34, -38, 32, -3, 53, -47, 8, -22, -23, -72, -65, -16, -28, 26, 26, 63, -13, 5, -14, 29, 10, 26, -48, 28, 9, 14, 17, -61, -18, 4, -30, 4, 14, 21, -5, -5, 27, 25, 71, -6, 17, -43, -6, 10, 8, 17, -6, 1, -86, -37, 14, -17, -23, -5, 10, 7, 37, -16, 8, -43, -59, 18, -15, 43, -33, 41, -21, -28, -7, -17, -12, 1, 83, 22, -16, 16, -4, -20, 12, 35, 74, -33, 0, -2, 7, -7, -51, 3, 24, 46, -31, -54, -14, 19, -14, -51, 35]
+Encoded: b'\x00\x16d\x11\x06\xc5\x07\x84\t\x85A\x00u\x82\x00^\x10\x06\x02\x05\t\x120\x15\x05\xc6\x0e\x0b\xb0H\x0f\x018> !\x0b\x82\x10$\x81\x00\x15\x87\x80\xca\x05\xf0\xd8`\xe0R\x07\xe0\x88p\x11\xc1\x98P\x1c\x83\x10\x88h\x0e \xc0\x08\x8109\x01\x14\x15\x85\x80\x824.\x07\x11\xa0\x84\x14\x01 \n\xa0H\x12\x05\xd8\x18\x03\xa0\x88PP@,\n\x04B\x00\xb48\x02\x1c\x0b\xa0\x8c\t`v\x0c\x81(\x80\xe4\t\xa0L\x0e\x01d\x17\x03\xa1\x00@\x04b\x81h\x17\x01\xd0\x11\xc0\xbe\x07\xb0X\x1a\x01\x1a\x05\x13\x82\xb0\x10\x83A\x88&@\xd4\t\xa05\x00\x9e\x02T\x11\x02! F\x04aQ\xa1\xe0\x11\xc00\x01H\x80\xb8:\x04@\x84\xe0\'\x81@\x17@\xd6\x1f\x07\xa1\xf0"\x814\x08\x07\x03P\x17\xc2\x00\xb4\x17\x80\x91\x01\x06\x08A\xc84\x06\x80~\r\x8a\x0e\x83\xa0\xa04\x03\x088\t\x07\x01\x10\x1e\xc1(\x80z 8\n\x85\x8b\x06\xc0\xc8\x04p\xd0D\x05q\xa1@\x80"\x1a\x80V\x81,8\x08\xc1x\xb0\xa0\xe0%\x02\x10\x80\x15\xc0\xee\t\x03\xe0V\x02\x18\x14\x81X9\x1e\x08\xc3(\x050,\x04 \x80H)\x0c\x01\x18\x04\xa0\x10\xe5\x1c<\x0c\xe6\x06\x00\\\x07\xe0m\x0e\x82`\xe8\x19\xc0\x8d'
 Decoded:  b"According to all known l`ws of aviashon, these is no way that a bef should!ce able to fly. Its wjngs are too small to get its fat\x1flittle aocy off the ground. Tie bee, of course, flies!anyways. Because bees don't!carf what humans uhink is impossiale."
+Input length: 249, encoded length 322
 ```
 
 You can also import this file as a library:
@@ -14,7 +15,7 @@ You can also import this file as a library:
 ```py
 from jpg4txt import encode, decode
 e = encode(bytes("早上好中國，現在我有冰淇淋", encoding="utf8"))
-# e = [1145, 30, 2, -8, 2, -1, -13, 31, 3, 19, -3, 8, -21, -6, 16, 15, -4, 11, -11, 60, 13, 31, -17, 70, -23, 121, 90, -111, -10, -9, 4, -14, -23, -4, 32, -5, 21, -4, 36]
+# e = b'\x00\x11\xe4\x0f\x08\x11#\r\x83\xe3\x02c\x84\x01X\xd0@\x1e\x12\x16\x0b\x81\xe04\x0f\x81\x18\x08\xc0^\x03\xc8\x05\xa0\r\xf0\xa8L@t\x17\x89\x02\x00\xb0T$\t\x10'
 d = decode(e)
 # d = b'\xe6\x97\xa9\xe4\xb8\x8a\xe5\xa5\xbd\xe4\xb8\xad\xe5\x9c\x8b\xef\xbc\x8c\xe7\x8f\xbe\xe5\x9c\xa8\xe6\x87\x91\xe6\x9c\x8a\xe5\x86\xb0\xe6\xb7\x87\xe6\xb7\x8b'
 # which translates to the string '早上好中國，現在懑朊冰淇淋'
@@ -27,11 +28,11 @@ A: That's not a question.
 ### Q: Why are you doing this?
 A: Yes.
 
-### Q: Why is the encoding output a list of ints instead of a series of bytes/bits?
+### Q: Why does your compression algorithm make the string longer?
 A: I'm too lazy to do the actual compression part of this for now, feel free to do further JPEG-inspired compression and submit a PR. See other TODOs below.
 
 ## TODO
 
 - use block based compression instead of compressing the entire thing
 - do what JPG does (quantization and run length/huffman encoding/decoding)
-- convert arbitrary list of integers to a list of bytes and decode
+- convert arbitrary list of integers to a list of bytes and decode in a better way
